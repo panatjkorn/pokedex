@@ -1,11 +1,12 @@
-import "./App.css";
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { PokemonProvider } from "./context/PokemonContext";
 import Header from "./components/Header";
 import PokemonLists from "./pages/PokemonListsPage";
 import PokemonDetail from "./pages/PokemonDetailPage";
+import "./App.css";
 
-export default function App() {
+const App: React.FC = () => {
   return (
     <PokemonProvider>
       <BrowserRouter>
@@ -17,4 +18,6 @@ export default function App() {
       </BrowserRouter>
     </PokemonProvider>
   );
-}
+};
+
+export default App;
