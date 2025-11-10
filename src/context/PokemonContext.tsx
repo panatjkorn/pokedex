@@ -101,7 +101,6 @@ export const PokemonProvider: React.FC<{ children: React.ReactNode }> = ({
     const evolutionQuery = useQuery<Evolution[]>({
       queryKey: ["pokemon-evolution", id],
       queryFn: async () => {
-        // ต้องรอจนกว่าจะมี pokemonQuery.data ก่อนถึงจะใช้ species API ได้
         const resSpecies = await fetch(
           `https://pokeapi.co/api/v2/pokemon-species/${id}/`
         );
